@@ -1,0 +1,17 @@
+pipeline:
+  build:
+    image: node:8
+    commands:
+      - yarn install
+      - yarn test
+      - yarn pack --filename=package.tgz
+
+  build-image:
+    image: docker
+    commands:
+      - docker build -t cncd-env-test:test .
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  test:
+    image: cncd-env-test:test

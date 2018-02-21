@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+const ciParse = require('..');
+const known = ciParse().knownVariables;
+
+function row(...cols) {
+  console.log(`| ${cols.join(' | ')} |`);
+}
+
+function makeTable() {
+  row('**Name**', '**Type**', '**Description**');
+  row('---', '---', '---');
+  for (const rec of Object.values(known).sort((a,b) => a.name.localeCompare(b.name))) {
+    row(rec.name, rec.type, rec.desc);
+  }
+}
+
+makeTable();

@@ -1,0 +1,10 @@
+node_modules
+.git
+*.tmp
+.tmp
+.build
+.DS_Store
+*.tgz
+*.tar.gz
+!package.tgz
+.tmp

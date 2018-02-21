@@ -1,0 +1,46 @@
+{
+  "name": "cncd-env",
+  "description": "parse and coerce variables from CNCD environment",
+  "author": "Burl Nyswonger <burl.bn@gmail.com> (https://github.com/burl)",
+  "contributors": [],
+  "license": "MIT",
+  "homepage": "https://github.com/burl/node-cncd-env",
+  "repository": {
+    "url": "https://github.com/burl/node-cncd-env",
+    "type": "git"
+  },
+  "bugs": "https://github.com/burl/node-cncd-env/issues",
+  "version": "1.0.4",
+  "main": "lib/cncd-env.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "ava -v",
+    "cover": "nyc ava -v test",
+    "cover:report": "nyc report -r lcov",
+    "docs:gen": "scripts/gen-table"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "coveralls": "^3.0.0",
+    "nyc": "^11.4.1"
+  },
+  "keywords": [
+    "cncd",
+    "drone",
+    "pipeline",
+    "continuous",
+    "integration",
+    "delivery"
+  ],
+  "engines": {
+    "node": ">=8.0"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ]
+  }
+}

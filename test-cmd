@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+const assert = require('assert');
+const ciParse = require('.');
+
+function main() {
+  const ci = ciParse();
+  console.log(`buildNumber is ${ci.buildNumber}`);
+  console.log(`buildStarted is ${ci.buildStarted}`);
+  assert(typeof ci.buildNumber === 'number', `buildNumber (${ci.buildNumber}) is numeric and found`);
+  assert(ci.buildStarted instanceof Date, `buildStarted (${ci.buildStarted}) is a Date and found`);
+}
+
+main();
