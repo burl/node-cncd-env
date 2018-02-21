@@ -10,7 +10,7 @@
     "type": "git"
   },
   "bugs": "https://github.com/burl/node-cncd-env/issues",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "main": "lib/cncd-env.js",
   "files": [
     "lib"
